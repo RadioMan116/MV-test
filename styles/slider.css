@@ -102,4 +102,11 @@
   .swiper-button-next {
     display: none;
   }
+  .swiper-slide video{
+    display: none;
+  }
+  .swiper-slide {
+    background: url('../images/photo-mob.jpg') no-repeat;
+    background-size: cover;
+  }
 }
