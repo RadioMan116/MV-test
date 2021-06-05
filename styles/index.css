@@ -1,0 +1,46 @@
+@import "slider.css";
+@import "content.css";
+@import "header.css";
+@import "footer.css";
+@import "fonts.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: CoreSans;
+  color: #fff;
+  font-size: 16px;
+  max-width: 1680px;
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.main {
+  background: #798a79;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.main.active .content{
+  transition: .2s ease-in-out;
+  background: rgba(0, 0, 0, .5);
+}
+.left{
+  max-width:150px;
+  width: 100%;
+}
+.middle{
+  max-width: 373px;
+  width: 100%;
+}
+.right{
+  max-width: 581px;
+  width: 100%;
+}

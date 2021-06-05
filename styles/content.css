@@ -1,0 +1,208 @@
+.content {
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    box-sizing:border-box;
+    padding: 40px;
+    display: flex;
+    flex-direction:column;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'logo info menu' 'socials small wide' 'footer footer footer'; */
+}
+.content-body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.content-body__ul{
+    display: flex;
+    flex-direction: column;
+}
+.content-body__ul:last-child{
+    display: flex;
+    flex-direction: column;
+    margin-left: 44px;
+}
+.content-body__small {
+    grid-area: small;
+}
+.content-body__top {
+    display: flex;
+    margin-bottom: 23px;
+}
+.content-body__li {
+    text-decoration: underline;
+    opacity: 0.6;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+.content-body__li:last-child {
+    margin-bottom: 0;
+}
+.content-body__li:hover {
+    opacity: 1;
+}
+.content-body__bottom {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+.content-body__image{
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 373px;
+    margin-bottom: 17px;
+}
+.content-body__hiding {
+    transition: .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transform: translateY(+5%);
+}
+.content-body__hiding.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.content-body__hiding-title {
+    margin-bottom: 10px;
+}
+.content-body__hiding-text {
+    opacity: 0.6;
+    line-height: 19px;
+}
+.content-body__wide {
+    grid-area: wide;
+    position: relative;
+}
+.content-body__wide-text {
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: -0.02em;
+    margin-bottom: 50px;
+}
+.content-body__buttons {
+    display: flex;
+    align-items: center;
+}
+.content-body__button-border {
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 20px 20px 20px 44px;
+    cursor: pointer;
+    /* z-index: 1; */
+    overflow: hidden;
+    position: relative;
+    background: url('../images/increment.svg') no-repeat 20px 48%;
+}
+.content-body__button-border:after{
+    content: '';
+    background: #ecf0f1;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+}
+.content-body__button-border:hover:after{
+    transform: scale(1, 1);
+}
+.content-body__button-border:hover{
+    color:#000;
+    background: url('../images/increment-black.svg') no-repeat 20px 48%;
+}
+.content-body__button {
+    margin-left: 30px;
+    cursor: pointer;
+}
+.socials {
+    grid-area: socials;
+    display: flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    padding-top: 65px;
+}
+.socials-item {
+    margin-bottom: 30px;
+    max-width:14px;
+}
+.socials-item:last-child {
+    margin-bottom: 0;
+}
+.facebook {
+}
+.inst {
+}
+.twitter {
+}
+.vk {
+}
+
+@media screen and (max-width: 1300px) {
+    .content-body{
+        flex-wrap: wrap;
+    }
+    .content-body .content-body__small{
+        order: 1;
+        max-width: none;
+        margin-top: 30px;
+
+    }
+    .content-body__wide-text{
+        font-size: 30px;
+    }
+    .socials{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .content-body .content-body__wide{
+        max-width: none;
+    }
+    .socials{
+        flex-direction: row;
+    }
+    .socials-item{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        padding: 20px;
+    }
+    .socials{
+        display: none;
+    }
+    .content-body .content-body__small{
+        display: none;
+    }
+    .content-body__wide-text{
+        font-size: 21px;
+        line-height: 31px;
+    }
+    .content-body__buttons{
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .content-body__button-border{
+        padding: 13px 22px;
+    }
+    .content-body__button{
+        margin: 30px 0 0;
+    }
+}

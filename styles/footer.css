@@ -1,0 +1,243 @@
+.footer{
+    display: flex;
+    align-items: center;
+    grid-area: footer;
+    padding: 35px 0 0;
+    position: relative;
+    margin-top: auto;
+}
+.footer::after{
+    content:'';
+    width: 104.9%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 0;
+    left: -40px;
+}
+.footer-rooms {
+}
+.footer-title {
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+.footer-rooms__buttons {
+    display: flex;
+}
+.footer-rooms__button {
+    padding:20px;
+    background: rgba(255, 255, 255, 0.16);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.footer-rooms__button:first-child {
+    border-radius: 7px 0 0 7px;
+}
+.footer-rooms__button:last-child {
+    border-radius: 0 7px 7px 0;
+    border-right: none;
+}
+.footer-rooms__button.active {
+    color: #000;
+    background: #fff;
+}
+.footer-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 270px;
+}
+.footer-input{
+    background: rgba(255, 255, 255, 0.16);
+    border: none;
+    max-width: 134px;
+    padding: 20px 69px 20px 37px;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 0 7px 7px 0;
+}
+.footer-input.border{
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 7px 0 0 7px;
+}
+.footer-range{
+    width: 100%;
+}
+.footer-inputs__container{
+    position: relative;
+}
+.footer-inputs__tiny{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+}
+.footer-inputs__meter{
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-area {
+    margin-left: 20px;
+}
+.footer-area__inputs {
+}
+.footer-cost {
+    margin-left: 20px;
+}
+.footer-cost__inputs {
+}
+.footer-complex {
+    margin-left: 20px;
+    max-width: 270px;
+    width: 100%;
+    position: relative;
+}
+.footer-complex__select{
+    position: relative;
+}
+.footer-complex__select:before {
+    content: '';
+    position: absolute;
+    top:50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(90deg);
+    width: 9px;
+    height: 13px;
+    background: url('../images/arrow.svg') no-repeat;
+    pointer-events: none;
+}
+.footer-select{
+    appearance: none;
+    background: rgba(255, 255, 255, 0.16);
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+.footer-inner{
+    display: flex;
+    align-self: flex-end;
+}
+.footer-more {
+    margin-left: 45px;
+    padding: 10px 4px 10px 19px;
+    width: 127px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
+    cursor: pointer;
+}
+.footer-more__text{
+    font-size: 13px;
+    margin-left: 14px;
+    line-height: 17px;
+}
+.footer-all {
+    margin-left: 20px;
+    margin-left: 20px;
+    background: #D90002;
+    border-radius: 7px;
+    padding: 20px 23px;
+    align-self: flex-end;
+}
+.span-mob{
+    display: none;
+}
+/* range-slider */
+.range-slider-wrapper{
+    width: 100%;
+}
+.irs--round{
+    height: unset;
+}
+.irs--round .irs-bar{
+    top: 0;
+    background-color: #d90002;
+}
+.irs--round .irs-handle{
+    top: -10px;
+    border: 4px solid #d90002;
+    background-color: #d90002;
+}
+.irs--round .irs-handle:hover{
+    background-color: #d90002;
+}
+.irs--round .irs-line{
+    top: 0;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1655px){
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer-inner{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .footer-more{
+        margin-left: 0;
+    }
+}
+
+@media screen and(max-width: 1300px) {
+    .footer:after{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .footer-complex{
+        max-width: none;
+        margin: 20px 0 0 0;
+    }
+    .footer-complex__select{
+        max-width: 270px;
+    }
+}
+@media screen and (max-width: 950px){
+    .footer-cost{
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer{
+        padding: 0;
+    }
+    .footer-inner{
+        margin: 0;
+    }
+    .footer-all{
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        font-size: 14px;
+        width: 100%;
+        padding: 20px;
+        background-image: url(../images/search.svg);
+        background-position: 98% 50%;;
+        background-repeat: no-repeat;
+    }
+    .footer-rooms,
+    .footer-area,
+    .footer-cost,
+    .footer-complex,
+    .footer-more{
+        display: none;
+    }
+    .span-mob{
+        display: inline;
+    }
+    .span-desk{
+        display: none;
+    }
+}

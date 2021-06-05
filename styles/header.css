@@ -1,0 +1,124 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.logo {
+    grid-area: logo;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.logo-circuit{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width:47px;
+    height:47px;
+    background: radial-gradient(66.89% 66.89% at 59.24% 24.84%, #FEC8C1 0%, rgba(229, 106, 89, 0) 100%), #D13233;
+    box-shadow: -6px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+.logo-text{
+    margin-left: 8px;
+}
+.header-info {
+    grid-area: info;
+}
+.header-info__number {
+    font-size: 20px;
+    letter-spacing: -0.03em;
+}
+.header-info__hours {
+    margin-top: 18px;
+    font-size: 16px;
+    opacity: 0.5;
+}
+.header-menu {
+    display: flex;
+    grid-area: menu;
+}
+.header-menu__ul {
+    display: flex;
+}
+.header-menu__li {
+    margin-left: 20px;
+}
+.header-menu__li:first-child {
+    margin-left: 0;
+}
+.burger {
+    margin-left: 38px;
+    width: 48px;
+    flex-shrink: 0;
+    position: relative;
+}
+.burger-item {
+    border: 1px solid;
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+.burger-hover{
+    width: 70px;
+    height: 55px;
+    position: absolute;
+    top: -22px;
+    left: -10px;
+}
+.burger-hover:hover + .burger-item.top {
+    transform: rotate(10deg) translateY(5px);
+}
+.burger-hover:hover ~ .burger-item.bottom {
+    transform: rotate(-10deg) translateY(-1px);
+}
+.burger-item.bottom{
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 1300px){
+    .header{
+        flex-wrap: wrap;
+    }
+    .header .header-menu{
+        max-width: none;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        align-items: center;
+    }
+    .header .header-info{
+        display: flex;
+        margin-left: auto;
+        max-width: 40px;
+        height: 40px;
+    }
+    .header-info__number {
+        font-size: 0;
+    }
+    .header-info__hours{
+        display: none;
+    }
+    .header-info__number:after{
+        content: '';
+        display: flex;
+        width: 36px;
+        height: 36px;
+        background: url('../images/telephone.svg') no-repeat center;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+    .header .header-menu{
+        margin: 0 0 0 24px;
+        max-width: 50px;
+    }
+    .header-menu__ul{
+        display: none;
+    }
+    .burger{
+        margin-left: 0;
+    }
+}

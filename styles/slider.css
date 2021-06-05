@@ -1,0 +1,105 @@
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+.swiper-container {
+  height: 100%;
+}
+.swiper-button-prev {
+  left: -120px;
+  right: auto;
+  top: 0;
+  transform: rotate(180deg);
+  width: 40px;
+  height: 40px;
+}
+.swiper-button-next {
+  right: auto;
+  left: -70px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .3);
+  position: absolute;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: url("../images/arrow.svg") no-repeat center;
+  margin-top: 0;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+/* animation spin button */
+.swiper-button-next:before,
+.swiper-button-next:after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.spin:hover {
+  color: #fff;
+}
+
+.spin::before,
+.spin::after {
+  top: -2px;
+  left: -2px;
+}
+
+.spin::before {
+  border: 2px solid transparent;
+}
+
+.spin:hover:before {
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+
+  transition: border-top-color .7s ease-in-out, border-right-color ease-in-out .8s, border-bottom-color ease-in-out .9s, border-left-color ease-in-out 1s;
+}
+.spin::after {
+  border: 3px solid transparent;
+}
+.spin:hover::after {
+  border-top: 2px solid #fff;
+  border-left-width: 2px; 
+  border-right-width: 2px; 
+  transform: rotate(270deg); 
+  transition: transform 1s ease-in-out 1s, border-left-width 1s ease-in-out 1;
+}
+.circle::before,
+.circle::after {
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 815px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: -50px;
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: 50px;
+  }
+  .swiper-button-next {
+    left: auto;
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
